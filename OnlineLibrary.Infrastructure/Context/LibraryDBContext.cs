@@ -10,8 +10,8 @@ namespace OnlineLibrary.Infrastructure.Context
 {
     public class LibraryDBContext : DbContext
     {
-        DbSet<Author> Authors { get; set; }
-        DbSet<Book> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        //public DbSet<Book> Books { get; set; }
         public LibraryDBContext(DbContextOptions<LibraryDBContext> options) : base(options)
         { }
     }

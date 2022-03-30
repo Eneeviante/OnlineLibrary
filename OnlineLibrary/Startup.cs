@@ -10,6 +10,10 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Text;
 using OnlineLibrary.Infrastructure.Context;
+using OnlineLibrary.Domain.Services.ServiceInterfaces;
+using OnlineLibrary.Domain.Services;
+using OnlineLibrary.Domain.Interfaces;
+using OnlineLibrary.Infrastructure.Repositories;
 
 namespace OnlineLibrary
 {
@@ -36,7 +40,9 @@ namespace OnlineLibrary
                 options.UseSqlServer(connection);
             });
 
-            //services.AddTransient<IBookingService, BookingService>();
+            services.AddTransient<IAuthorService, AuthorService>();
+
+            services.AddTransient<IAuthorRepository, AuthorRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

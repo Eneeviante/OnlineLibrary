@@ -8,7 +8,7 @@ namespace OnlineLibrary.Domain.Models
 {
     public class Author
     {
-        Guid Id { get; set; }
-        string LastName { get; set; }
+        public Guid Id { get; set; }
+        public string LastName { get; set; }
     }
 }
