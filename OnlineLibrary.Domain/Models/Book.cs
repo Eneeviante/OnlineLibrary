@@ -9,10 +9,10 @@ namespace OnlineLibrary.Domain.Models
 {
     public class Book
     {
-        Guid Id { get; set; }
-        ushort Year { get; set; }
+        public Guid Id { get; set; }
+        public ushort Year { get; set; }
         [MaxLength(30)]
-        string Name { get; set; }
-        List<Author> Authors { get; set; }
+        public string Name { get; set; }
+        public List<Author> Authors { get; set; }
     }
 }

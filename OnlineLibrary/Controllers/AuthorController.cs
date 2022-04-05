@@ -18,9 +18,9 @@ namespace OnlineLibrary.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllAsync()
         {
-            var bookings = await authorService.GetAllAsync();
+            var authors = await authorService.GetAllAsync();
 
-            return new ObjectResult(bookings);
+            return new ObjectResult(authors);
         }
 
         [HttpPost("{lastName}")]
